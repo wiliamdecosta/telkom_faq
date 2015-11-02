@@ -1,0 +1,112 @@
+body {
+	background-color: #d3dfd1;
+	margin: 0px;
+	padding: 0px;
+	font-family: "trebuchet ms", "luxi sans", verdana, helvetica, sans-serif;
+	font-size:12px;
+}
+
+.page-header{
+	background: url("../images/layout/bg-header2.png") repeat-x;
+	height:89px;
+	margin:0px;
+	padding:0px;
+}
+
+.logo{
+	background: url("../images/layout/logo.png") no-repeat;
+	padding-top:10px;
+	height:80px;
+	width:500px;
+	color: #fff;
+}
+
+.header-inside{
+	background: url("../images/layout/bg-header2.png") repeat-x;
+	height:89px;
+	margin:0px;
+	padding:0px;
+}
+
+.logo-inside{
+	background: url("../images/layout/logo.png") no-repeat;
+	height:80px;
+	width:353px;
+	font-size:20px;
+	color: #fff;
+}
+
+.page-body{
+
+}
+
+.page-footer{
+
+}
+
+body.login {
+		background-color: #d3dfd1;
+    margin:0px;
+    padding: 0px;
+}
+
+body.login .page-wrapper .page-body {
+    height: 530px;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+.page-footer{
+    text-align: center;
+    color: #fff;
+    margin: 0px auto;
+    background: url("../images/layout/bg-footer.png") repeat-x;
+    height: 42px;
+    padding-bottom: 0px;
+}
+
+.footer-content{
+    color: #fff;
+    padding-top: 15px;
+    padding-bottom: 0px
+}
+
+.clear {
+    clear:both;
+}
+
+/* LoginForm */
+.loginform {
+	padding-top: 120px;
+	width: 354px;
+	height: 234px;
+	margin: 0px auto;
+	background: url("../images/layout/login-box.png") no-repeat bottom ;;
+}
+
+.loginform label{
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.loginform-title {
+	width: 385px;
+	height: 83px;
+}
+.loginform-content {
+    padding-left:60px;
+    width: 250px;
+}
+
+.loginform-content input{
+    margin:3px 0px;
+}
+
+.errormsg{
+    color:#fff;
+}
+
+body.login .errormsg{
+    color: #fff;
+}
