@@ -52,11 +52,20 @@ class Requirement extends Abstract_model {
 		if($this->actionType == 'CREATE') {
 			//do something
 			
+			if(empty($this->record['req_date'])) {
+			    $this->record['req_date'] = null; 
+			}
+			
 			$this->record['req_created_date'] = date('Y-m-d');
             $this->record['req_created_by'] = $user_name;
             $this->record['req_updated_date'] = date('Y-m-d');
             $this->record['req_updated_by'] = $user_name;
 		}else {
+		    
+		    if(empty($this->record['req_date'])) {
+			    $this->record['req_date'] = null; 
+			}
+			
 			//do something
 			$this->record['req_updated_date'] = date('Y-m-d');
             $this->record['req_updated_by'] = $user_name;
