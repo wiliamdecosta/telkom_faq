@@ -53,12 +53,29 @@ class Req_detail extends Abstract_model {
 		if($this->actionType == 'CREATE') {
 			//do something
 			
+			if(empty($this->record['req_det_start_date'])) {
+			    $this->record['req_det_start_date'] = null; 
+			}
+			
+			if(empty($this->record['req_det_due_date'])) {
+			    $this->record['req_det_due_date'] = null; 
+			}
+			
 			$this->record['req_det_created_date'] = date('Y-m-d');
             $this->record['req_det_created_by'] = $user_name;
             $this->record['req_det_updated_date'] = date('Y-m-d');
             $this->record['req_det_updated_by'] = $user_name;
 		}else {
 			//do something
+			
+			if(empty($this->record['req_det_start_date'])) {
+			    $this->record['req_det_start_date'] = null; 
+			}
+			
+			if(empty($this->record['req_det_due_date'])) {
+			    $this->record['req_det_due_date'] = null; 
+			}
+			
 			$this->record['req_det_updated_date'] = date('Y-m-d');
             $this->record['req_det_updated_by'] = $user_name;
 		}
