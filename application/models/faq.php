@@ -56,12 +56,29 @@ class Faq extends Abstract_model {
 		if($this->actionType == 'CREATE') {
 			//do something
 			
+			if(empty($this->record['faq_case_date'])) {
+			    $this->record['faq_case_date'] = null; 
+			}
+			
+			if(empty($this->record['faq_solution_finish_date'])) {
+			    $this->record['faq_solution_finish_date'] = null; 
+			}
+			
 			$this->record['faq_created_date'] = date('Y-m-d');
             $this->record['faq_created_by'] = $user_name;
             $this->record['faq_updated_date'] = date('Y-m-d');
             $this->record['faq_updated_by'] = $user_name;
 		}else {
 			//do something
+			
+			if(empty($this->record['faq_case_date'])) {
+			    $this->record['faq_case_date'] = null; 
+			}
+			
+			if(empty($this->record['faq_solution_finish_date'])) {
+			    $this->record['faq_solution_finish_date'] = null; 
+			}
+			
 			$this->record['faq_updated_date'] = date('Y-m-d');
             $this->record['faq_updated_by'] = $user_name;
 		}
