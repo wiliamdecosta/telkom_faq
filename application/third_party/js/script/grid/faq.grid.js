@@ -54,6 +54,9 @@ Tracking.grid.faq = Ext.extend(Webi.grid.GridPanel, {
                 
         this.cmbApp = new Tracking.combo.application({emptyText:'Application', width:254});
         this.cmbApp.on('select', this.onSearch, this);
+        
+        this.txtSearch = new Ext.form.TextField({emptyText:'Search...', width: 200});
+        this.txtSearch.on('specialkey',this.onSearchText,this);
                 
         if (this.enableAdd === true){
             buttons.push({
@@ -106,6 +109,8 @@ Tracking.grid.faq = Ext.extend(Webi.grid.GridPanel, {
         buttons.push(this.labelFilter);
         buttons.push(' ');
         buttons.push(this.cmbApp);
+        buttons.push(' ');
+        buttons.push(this.txtSearch);
         
         buttons.push({
             itemId: 'btnReset',
@@ -121,15 +126,21 @@ Tracking.grid.faq = Ext.extend(Webi.grid.GridPanel, {
     	this.store.baseParams = {};
     	this.store.load();
     	
-    	this.cmbApp.reset();		
+    	this.cmbApp.reset();
+    	this.txtSearch.reset();		
     },
     
     getSearchParams: function() {
     	var app_id = this.cmbApp.getValue();
+    	var search_text = this.txtSearch.getValue();
 				
 		var p = {};
 		if(!Ext.isEmpty(app_id)) {
 			p['app_id'] = app_id;
+		}
+		
+		if(!Ext.isEmpty(search_text)) {
+			p['search_text'] = search_text;
 		}
 
 		return p;
@@ -139,6 +150,12 @@ Tracking.grid.faq = Ext.extend(Webi.grid.GridPanel, {
     	var params = this.getSearchParams();
     	this.store.baseParams = params;
     	this.store.load();
+    },
+    
+    onSearchText: function(field, e) {
+    	if(e.getKey() == e.ENTER) {
+    		this.onSearch();	
+    	}
     }
 });
 Ext.reg('grid_faq', Tracking.grid.faq);
