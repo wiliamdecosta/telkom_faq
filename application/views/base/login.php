@@ -62,7 +62,7 @@
 								<h1>
 									<i class="ace-icon fa fa-globe green"></i>
 									<span class="red">Telkom</span>
-									<span class="white" id="id-text2"> <br/> FAQ & Requirement</span>
+									<span class="white" id="id-text2"> <br/> Back Office Services</span>
 								</h1>
 								<h4 class="blue" id="id-company-text">Copyright &copy; PT.Triklin Rekatama 2015</h4>
 							</div>
