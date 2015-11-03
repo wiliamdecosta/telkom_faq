@@ -28,7 +28,7 @@
 	
 	<!-- Load Tree Panel -->
 	<?php $this->load->view('home/tree_panel.php'); ?>
-	<div id="header"> <h2 style="color:#FFFFFF">FAQ & Requirements</h2> </div>
+	<div id="header"> <h2 style="color:#FFFFFF">FAQ & Requirement</h2> </div>
 
 </body>
 </html>
