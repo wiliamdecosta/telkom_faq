@@ -25,7 +25,7 @@ Tracking.form.faq = Ext.extend(Webi.form.FormPanel, {
         
         this.fields.faq_id = new Ext.form.Hidden({fieldLabel: Tracking.properties.faq_id, name: 'faq_id', allowBlank: true});
 
-        this.fields.app_id = new Tracking.combo.application({name: 'app_id', allowBlank: true, width: 245});
+        this.fields.app_id = new Tracking.combo.application({name: 'app_id', allowBlank: false, width: 245});
         /* load record event */
         this.on('loadrecord', function(form, record, actionType){
             if (actionType == 'update'){
