@@ -53,11 +53,11 @@ class Req_detail extends Abstract_model {
 		if($this->actionType == 'CREATE') {
 			//do something
 			
-			if(empty($this->record['req_det_start_date'])) {
+			if(isset($this->record['req_det_start_date']) and empty($this->record['req_det_start_date'])) {
 			    $this->record['req_det_start_date'] = null; 
 			}
 			
-			if(empty($this->record['req_det_due_date'])) {
+			if(isset($this->record['req_det_due_date']) and empty($this->record['req_det_due_date'])) {
 			    $this->record['req_det_due_date'] = null; 
 			}
 			
@@ -68,11 +68,11 @@ class Req_detail extends Abstract_model {
 		}else {
 			//do something
 			
-			if(empty($this->record['req_det_start_date'])) {
+			if(isset($this->record['req_det_start_date']) and empty($this->record['req_det_start_date'])) {
 			    $this->record['req_det_start_date'] = null; 
 			}
 			
-			if(empty($this->record['req_det_due_date'])) {
+			if(isset($this->record['req_det_due_date']) and empty($this->record['req_det_due_date'])) {
 			    $this->record['req_det_due_date'] = null; 
 			}
 			
