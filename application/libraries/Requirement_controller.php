@@ -26,6 +26,7 @@ class Requirement_controller {
 		$req_updated_date = getVarClean('req_updated_date', 'date', '');
 		$req_updated_by = getVarClean('req_updated_by', 'str', '');
 		
+		$search_text = getVarClean('search_text', 'str', '');
     	$data = array('items' => array(), 'success' => false, 'message' => '');
 
     	try {
@@ -44,7 +45,13 @@ class Requirement_controller {
                     }
                 }
             }
-        
+            
+            if(!empty($search_text)) {
+                $table->setCriteria("requirement.req_desc ILIKE '%".$search_text."%'
+                                        OR requirement.req_by ILIKE '%".$search_text."%'
+                                        OR requirement.req_evidence_desc ILIKE '%".$search_text."%'");
+            }
+            
             $query = $table->getDisplayFieldCriteria($query);
             if (!empty($query)) $table->setCriteria($query);
             
