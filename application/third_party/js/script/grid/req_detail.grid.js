@@ -32,6 +32,7 @@ Tracking.grid.req_detail = Ext.extend(Webi.grid.GridPanel, {
 			'req_det_id': '',
 			'req_id': this.store.baseParams.req_id || '',
 			'req_det_pic': '',
+			'req_det_desc': '',
 			'req_det_start_date': '',
 			'req_det_due_date': '',
 			'req_det_status': '',
