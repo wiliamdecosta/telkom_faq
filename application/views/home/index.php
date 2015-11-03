@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Telkom - FAQ & Requirement</title>
+		<title>Back Office Services</title>
 
 		<!-- Load CSS Here -->
 		<?php $this->load->view('template/default/csspageheader.php'); ?>
@@ -28,7 +28,7 @@
 	
 	<!-- Load Tree Panel -->
 	<?php $this->load->view('home/tree_panel.php'); ?>
-	<div id="header"> <h2 style="color:#FFFFFF">FAQ & Requirement</h2> </div>
+	<div id="header"> <h2 style="color:#FFFFFF">Back Office Services</h2> </div>
 
 </body>
 </html>
