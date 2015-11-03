@@ -44,6 +44,46 @@ Tracking.properties.faq_created_by= "Dibuat Oleh";
 Tracking.properties.faq_updated_date= "Tgl Update";
 Tracking.properties.faq_updated_by= "Diupdate Oleh";
 
+/* Properties for table track_maintenance */
+Tracking.properties.maintenance= "Maintenance";
+Tracking.properties.maintenance_addTitle= "Tambah Maintenance";
+Tracking.properties.maintenance_editTitle= "Edit Maintenance";
+Tracking.properties.mnt_id= "ID Maintenance";
+Tracking.properties.mnt_desc= "Deskripsi Maintenance";
+Tracking.properties.mnt_by= "Diminta Oleh";
+Tracking.properties.mnt_date= "Tgl Maintenance";
+Tracking.properties.mnt_evidence_desc= "Deskripsi Evidence";
+Tracking.properties.mnt_created_date= "Tgl Pembuatan";
+Tracking.properties.mnt_created_by= "Dibuat Oleh";
+Tracking.properties.mnt_updated_date= "Tgl Update";
+Tracking.properties.mnt_updated_by= "Diupdate Oleh";
+
+/* Properties for table track_maintenance_detail */
+Tracking.properties.maintenance_detail= "Detail Maintenance";
+Tracking.properties.maintenance_detail_addTitle= "Tambah Detail Maintenance";
+Tracking.properties.maintenance_detail_editTitle= "Edit Detail Maintenance";
+Tracking.properties.mnt_det_id= "ID Maintenance Detail";
+Tracking.properties.mnt_det_pic= "PIC";
+Tracking.properties.mnt_det_start_date= "Start Date";
+Tracking.properties.mnt_det_due_date= "Due Date";
+Tracking.properties.mnt_det_status= "Status";
+Tracking.properties.mnt_det_created_date= "Tgl Pembuatan";
+Tracking.properties.mnt_det_created_by= "Dibuat Oleh";
+Tracking.properties.mnt_det_updated_date= "Tgl Update";
+Tracking.properties.mnt_det_updated_by= "Diupdate Oleh";
+
+/* Properties for table track_maintenance_evidence */
+Tracking.properties.maintenance_evidence= "Maintenance Evidence";
+Tracking.properties.maintenance_evidence_addTitle= "Tambah Maintenance Evidence";
+Tracking.properties.maintenance_evidence_editTitle= "Edit Maintenance Evidence";
+Tracking.properties.mnt_evd_id= "ID Maintenance Evidence";
+Tracking.properties.mnt_evd_file= "Evidence File";
+Tracking.properties.mnt_evd_desc= "Deskripsi";
+Tracking.properties.mnt_evd_created_date= "Tgl Pembuatan";
+Tracking.properties.mnt_evd_created_by= "Dibuat Oleh";
+Tracking.properties.mnt_evd_updated_date= "Tgl Update";
+Tracking.properties.mnt_evd_updated_by= "Diupdate Oleh";
+
 /* Properties for table track_faq_attachment */
 Tracking.properties.faq_attachment= "FAQ Attachments";
 Tracking.properties.faq_attachment_addTitle= "Tambah FAQ Attachments";
