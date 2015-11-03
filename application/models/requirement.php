@@ -28,6 +28,7 @@ class Requirement extends Abstract_model {
 	public $selectClause 	= "requirement.req_id, requirement.app_id, requirement.req_desc,
 	                            requirement.req_by,  to_char(requirement.req_date, 'yyyy-mm-dd') as req_date, 
 	                            requirement.req_desc,
+	                            requirement.req_evidence_desc,
 	                            to_char(requirement.req_created_date, 'yyyy-mm-dd') as req_created_date, 
 	                            requirement.req_created_by,
                                 to_char(requirement.req_updated_date, 'yyyy-mm-dd') as req_updated_date,
@@ -52,7 +53,7 @@ class Requirement extends Abstract_model {
 		if($this->actionType == 'CREATE') {
 			//do something
 			
-			if(empty($this->record['req_date'])) {
+			if(isset($this->record['req_date']) and empty($this->record['req_date'])) {
 			    $this->record['req_date'] = null; 
 			}
 			
@@ -62,7 +63,7 @@ class Requirement extends Abstract_model {
             $this->record['req_updated_by'] = $user_name;
 		}else {
 		    
-		    if(empty($this->record['req_date'])) {
+		    if(isset($this->record['req_date']) and empty($this->record['req_date'])) {
 			    $this->record['req_date'] = null; 
 			}
 			
