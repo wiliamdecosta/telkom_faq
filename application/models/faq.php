@@ -56,11 +56,11 @@ class Faq extends Abstract_model {
 		if($this->actionType == 'CREATE') {
 			//do something
 			
-			if(empty($this->record['faq_case_date'])) {
+			if(isset($this->record['faq_case_date']) and empty($this->record['faq_case_date'])) {
 			    $this->record['faq_case_date'] = null; 
 			}
 			
-			if(empty($this->record['faq_solution_finish_date'])) {
+			if(isset($this->record['faq_solution_finish_date']) and empty($this->record['faq_solution_finish_date'])) {
 			    $this->record['faq_solution_finish_date'] = null; 
 			}
 			
@@ -71,11 +71,11 @@ class Faq extends Abstract_model {
 		}else {
 			//do something
 			
-			if(empty($this->record['faq_case_date'])) {
+			if(isset($this->record['faq_case_date']) and empty($this->record['faq_case_date'])) {
 			    $this->record['faq_case_date'] = null; 
 			}
 			
-			if(empty($this->record['faq_solution_finish_date'])) {
+			if(isset($this->record['faq_solution_finish_date']) and empty($this->record['faq_solution_finish_date'])) {
 			    $this->record['faq_solution_finish_date'] = null; 
 			}
 			
