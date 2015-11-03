@@ -29,7 +29,7 @@ class Faq_controller {
 		$faq_updated_date = getVarClean('faq_updated_date', 'date', '');
 		$faq_updated_by = getVarClean('faq_updated_by', 'str', '');
 
-		
+		$search_text = getVarClean('search_text', 'str', '');
     	$data = array('items' => array(), 'success' => false, 'message' => '');
 
     	try {
@@ -48,7 +48,15 @@ class Faq_controller {
                     }
                 }
             }
-        
+            
+            if(!empty($search_text)) {
+                $table->setCriteria("faq.faq_case_name ILIKE '%".$search_text."%'
+                                        OR faq.faq_case_by ILIKE '%".$search_text."%'
+                                        OR faq.faq_solution ILIKE '%".$search_text."%'
+                                        OR faq.faq_solution_by ILIKE '%".$search_text."%'
+                                        OR faq.faq_description ILIKE '%".$search_text."%'");
+            }
+            
             $query = $table->getDisplayFieldCriteria($query);
             if (!empty($query)) $table->setCriteria($query);
             
