@@ -11,7 +11,7 @@ class Role_menu_controller {
 		$start = getVarClean('start','int',0);
     	$limit = getVarClean('limit','int',50);
 
-    	$sort = getVarClean('sort','str','menu.menu_path, menu.menu_level');
+    	$sort = getVarClean('sort','str',"(split_part(menu.menu_path, '.', 1)::int ,split_part(menu.menu_path, '.', 2)), menu.menu_level");
     	$dir  = getVarClean('dir','str','ASC');
     	$query  = getVarClean('query','str','');
 
