@@ -37,8 +37,8 @@ class Maintenance extends Abstract_model {
 	public $fromClause 		= "track_maintenance AS maintenance
 							        LEFT JOIN track_application AS application ON maintenance.app_id = application.app_id";
 	
-	public $refs			= array('track_evidence' => 'mnt_id',
-	                                    'track_mnt_detail' => 'mnt_id');
+	public $refs			= array('track_maintenance_evidence' => 'mnt_id',
+	                                    'track_maintenance_detail' => 'mnt_id');
 	
 	public $comboDisplay	= array();
 
