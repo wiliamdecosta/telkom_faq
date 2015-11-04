@@ -24,7 +24,7 @@ Tracking.module.requirement = Ext.extend(Webi.module.Panel, {
 
         /* set masterId name for master-detail grid handling */
 		this.masterId = 'req_id';
-		this.displayId = 'req_id';
+		this.displayId = 'req_by';
 		
 		this.details = {
 			evidence: new Tracking.module.evidence({disabled: true}),
