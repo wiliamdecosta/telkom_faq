@@ -45,7 +45,7 @@ Tracking.grid.maintenance = Ext.extend(Webi.grid.GridPanel, {
     buildTopToolbar : function() {
         var buttons = [];
         
-        this.labelFilter = new Ext.form.Label({text:'Filter Requirement :'});
+        this.labelFilter = new Ext.form.Label({text:'Filter Maintenance :'});
                 
         this.cmbApp = new Tracking.combo.application({emptyText:'Application', width:254});
         this.cmbApp.on('select', this.onSearch, this);
