@@ -153,9 +153,9 @@ Tracking.grid.maintenance = Ext.extend(Webi.grid.GridPanel, {
         var excel_url = BASE_URL+'print_excel/download_maintenance';
         excel_url += '/'+this.cmbApp.getValue();
 
-        if(!Ext.isEmpty(start_date))
+        if(!Ext.isEmpty(this.startDate.getValue()))
             excel_url += '/'+ start_date;
-        if(!Ext.isEmpty(end_date))
+        if(!Ext.isEmpty(this.toDate.getValue()))
             excel_url += '/' + end_date;
 
         location.href = excel_url;
