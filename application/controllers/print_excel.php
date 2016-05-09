@@ -57,6 +57,7 @@ class Print_excel extends CI_Controller {
             $output.= '<td colspan="4"><strong>Detail Maintenance :'.$item['mnt_id'].' </strong></td>';
             $output.= '</tr>';
 
+            $M_detail->criteria = array();
             $M_detail->setCriteria('maintenance_detail.mnt_id = '.$item['mnt_id']);
             $items_detail = $M_detail->getAll(0,-1);
 
@@ -76,6 +77,7 @@ class Print_excel extends CI_Controller {
             $output.= '<td colspan="4"><strong>Evidence : </strong></td>';
             $output.= '</tr>';
 
+            $M_evidence->criteria = array();
             $M_evidence->setCriteria('maintenance_evidence.mnt_id = '.$item['mnt_id']);
             $items_evidence = $M_evidence->getAll(0,-1);
 
