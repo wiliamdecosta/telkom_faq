@@ -66,7 +66,7 @@ class Print_excel extends CI_Controller {
                 $output.='<td colspan="4">';
                 $output.='<ul>';
                 foreach ($items_detail as $detail) {
-                    $output.='<li>- PIC : '.$detail['mnt_det_pic'].' | Deskripsi: '.$detail['mnt_det_desc'].' | Date : '. date('d-M-Y',strtotime($detail['mnt_det_start_date'])).' s.d '.date('d-M-Y',strtotime($detail['mnt_det_due_date'])).' | Status : '.$this->getStatus($detail['mnt_det_status']).'</li>';
+                    $output.='<li>- PIC : '.$detail['mnt_det_pic'].' | Deskripsi: '.$detail['mnt_det_desc'].' | Date : '.(empty($detail['mnt_det_start_date']) ? "": date('d-M-Y',strtotime($detail['mnt_det_start_date'])) ).' s.d '.(empty($detail['mnt_det_due_date']) ? "": date('d-M-Y',strtotime($detail['mnt_det_due_date']))).' | Status : '.$this->getStatus($detail['mnt_det_status']).'</li>';
                 }
                 $output.='</ul>';
                 $output.='</td>';
