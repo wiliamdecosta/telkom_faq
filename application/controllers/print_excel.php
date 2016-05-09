@@ -86,7 +86,7 @@ class Print_excel extends CI_Controller {
                 $output.='<td colspan="4">';
                 $output.='<ul>';
                 foreach ($items_evidence as $evidence) {
-                    $output.='<li> - <a href="'.UPLOAD_PATH.'maintenance_evidence_attachments/'.$evidence['mnt_evd_file'].'">'.$evidence['mnt_evd_desc'].'</a></li>';
+                    $output.='<li> - <a href="'.UPLOAD_PATH.'maintenance_evidence_attachments/'.$evidence['mnt_evd_file'].'">'.$evidence['mnt_evd_file'].'</a></li>';
                 }
                 $output.='</ul>';
                 $output.='</td>';
