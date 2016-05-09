@@ -83,7 +83,7 @@ class Print_excel extends CI_Controller {
 
             if(count($items_evidence) > 0) {
                 $output.= '<tr>';
-                $output.='<td colspan="3">';
+                $output.='<td colspan="4">';
                 $output.='<ul>';
                 foreach ($items_evidence as $evidence) {
                     $output.='<li> - <a href="'.UPLOAD_PATH.'maintenance_evidence_attachments/'.$evidence['mnt_evd_file'].'">'.$evidence['mnt_evd_desc'].'</a></li>';
