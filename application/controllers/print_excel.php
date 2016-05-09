@@ -92,7 +92,7 @@ class Print_excel extends CI_Controller {
         $output .= '</table>';
 
         echo $output;
-        //startExcel('maintenance.xls');
+        startExcel('maintenance.xls');
 
         exit;
     }
