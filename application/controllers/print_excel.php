@@ -54,7 +54,7 @@ class Print_excel extends CI_Controller {
             $output.='</tr>';
 
             $output.= '<tr>';
-            $output.= '<td colspan="4"><strong>Detail Maintenance :'.$item['mnt_id'].' </strong></td>';
+            $output.= '<td colspan="4"><strong>Detail Maintenance : </strong></td>';
             $output.= '</tr>';
 
             $M_detail->criteria = array();
