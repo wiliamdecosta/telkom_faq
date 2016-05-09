@@ -50,7 +50,7 @@ class Print_excel extends CI_Controller {
             $output .= '<td>'.$no_urut_m++.'</td>';
             $output .= '<td>'.$item['mnt_desc'].'</td>';
             $output .= '<td>'.date('d-M-Y',strtotime($item['mnt_date'])).'</td>';
-            $output .= '<td>'.$item['mnt_by'].'</td>'
+            $output .= '<td>'.$item['mnt_by'].'</td>';
             $output.='</tr>';
 
             $output.= '<tr>';
