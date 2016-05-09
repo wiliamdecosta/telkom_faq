@@ -41,6 +41,7 @@ class Print_excel extends CI_Controller {
                         <th>No</th>
                         <th width="700">Nama Maintenance</th>
                         <th>Tgl Maintenance</th>
+                        <th>Diminta Oleh</th>
                     </tr>';
 
         $no_urut_m = 1;
@@ -49,10 +50,11 @@ class Print_excel extends CI_Controller {
             $output .= '<td>'.$no_urut_m++.'</td>';
             $output .= '<td>'.$item['mnt_desc'].'</td>';
             $output .= '<td>'.date('d-M-Y',strtotime($item['mnt_date'])).'</td>';
+            $output .= '<td>'.$item['mnt_by'].'</td>'
             $output.='</tr>';
 
             $output.= '<tr>';
-            $output.= '<td colspan="3"><strong>Detail Maintenance : </strong></td>';
+            $output.= '<td colspan="4"><strong>Detail Maintenance : </strong></td>';
             $output.= '</tr>';
 
             $M_detail->setCriteria('maintenance_detail.mnt_id = '.$item['mnt_id']);
@@ -60,7 +62,7 @@ class Print_excel extends CI_Controller {
 
             if(count($items_detail) > 0) {
                 $output.= '<tr>';
-                $output.='<td colspan="3">';
+                $output.='<td colspan="4">';
                 $output.='<ul>';
                 foreach ($items_detail as $detail) {
                     $output.='<li>- PIC : '.$detail['mnt_det_pic'].' | Deskripsi: '.$detail['mnt_det_desc'].' | Date : '. date('d-M-Y',strtotime($detail['mnt_det_start_date'])).' s.d '.date('d-M-Y',strtotime($detail['mnt_det_due_date'])).' | Status : '.$this->getStatus($detail['mnt_det_status']).'</li>';
@@ -71,7 +73,7 @@ class Print_excel extends CI_Controller {
             }
 
             $output.= '<tr>';
-            $output.= '<td colspan="3"><strong>Evidence : </strong></td>';
+            $output.= '<td colspan="4"><strong>Evidence : </strong></td>';
             $output.= '</tr>';
 
             $M_evidence->setCriteria('maintenance_evidence.mnt_id = '.$item['mnt_id']);
