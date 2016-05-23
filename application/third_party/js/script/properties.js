@@ -136,3 +136,15 @@ Tracking.properties.lbook_created_date= "Tgl Pembuatan";
 Tracking.properties.lbook_created_by= "Dibuat Oleh";
 Tracking.properties.lbook_updated_date= "Tgl Update";
 Tracking.properties.lbook_updated_by= "Diupdate Oleh";
+
+
+/* Properties for table core_user */
+Tracking.properties.user= "Users";
+Tracking.properties.user_addTitle= "Tambah Users";
+Tracking.properties.user_editTitle= "Edit Users";
+Tracking.properties.user_id= "ID User";
+Tracking.properties.user_name= "Nama User";
+Tracking.properties.user_password= "Password";
+Tracking.properties.user_email= "Email";
+Tracking.properties.user_realname= "Nama Lengkap";
+Tracking.properties.user_status= "Status";
