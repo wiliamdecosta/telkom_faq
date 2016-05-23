@@ -23,7 +23,7 @@ class Logbook_controller {
             $ci->load->model('logbook');
             $table = $ci->logbook;
 
-            $user_id = $ci->session->userdata('user_id');
+            $user_id = getVarClean('user_id','int',$ci->session->userdata('user_id'));
 
             //Set default criteria. You can override this if you want
             foreach ($table->fields as $key => $field){
@@ -55,6 +55,66 @@ class Logbook_controller {
         return $data;
     }
 
+
+    function read_user() {
+
+        $start = getVarClean('start','int',0);
+        $limit = getVarClean('limit','int',50);
+
+        $sort = getVarClean('sort','str','user_id');
+        $dir  = getVarClean('dir','str','DESC');
+        $query  = getVarClean('query','str','');
+
+        $searchUser = getVarClean('searchUser', 'str', '');
+
+        /* bootgrid request */
+        $bootgrid_request = getVarClean('bootgrid_request', 'str', '');
+        $current = getVarClean('current', 'int', 1);
+        $rowCount = getVarClean('rowCount', 'int', 10);
+        $searchPhrase = getVarClean('searchPhrase', 'str', '');
+        /* end bootgrid request */
+
+        $data = array('items' => array(), 'success' => false, 'message' => '');
+
+        try {
+
+            $ci = & get_instance();
+            $ci->load->model('base/user');
+            $table = $ci->user;
+
+            if(!empty($searchUser)) {
+                $table->setCriteria("(core_user.user_name ".$table->likeOperator." '%$searchUser%' OR core_user.user_realname ".$table->likeOperator." '%$searchUser%')");
+            }
+
+            if(!empty($searchPhrase)) {
+                $table->setCriteria("(core_user.user_name ".$table->likeOperator." '%$searchPhrase%' OR core_user.user_realname ".$table->likeOperator." '%$searchPhrase%')");
+            }
+
+            $table->setCriteria("(core_user.user_name != 'operator' and core_user.user_name != 'developer')");
+            $query = $table->getDisplayFieldCriteria($query);
+            if (!empty($query)) $table->setCriteria($query);
+
+
+            if($bootgrid_request == "Y") {
+                $start = ($current-1) * $rowCount;
+                $limit = $rowCount;
+                $data['current'] = $current;
+                $data['rowCount'] = $rowCount;
+            }
+
+            $items = $table->getAll($start, $limit, $sort, $dir);
+            $totalcount = $table->countAll();
+
+            $data['items'] = $items;
+            $data['success'] = true;
+            $data['total'] = $totalcount;
+
+        }catch (Exception $e) {
+            $data['message'] = $e->getMessage();
+        }
+
+        return $data;
+    }
 
     function create() {
 
