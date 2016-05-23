@@ -122,3 +122,17 @@ Tracking.properties.req_created_date= "Tgl Pembuatan";
 Tracking.properties.req_created_by= "Dibuat Oleh";
 Tracking.properties.req_updated_date= "Tgl Update";
 Tracking.properties.req_updated_by= "Diupdate Oleh";
+
+
+/* Properties for table track_application */
+Tracking.properties.logbook= "Logbook";
+Tracking.properties.logbook_addTitle= "Tambah Logbook";
+Tracking.properties.logbook_editTitle= "Edit Logbook";
+Tracking.properties.lbook_id= "ID Logbook";
+Tracking.properties.lbook_date= "Tgl Aktivitas";
+Tracking.properties.lbook_type= "Jenis Kegiatan";
+Tracking.properties.lbook_description= "Deskripsi";
+Tracking.properties.lbook_created_date= "Tgl Pembuatan";
+Tracking.properties.lbook_created_by= "Dibuat Oleh";
+Tracking.properties.lbook_updated_date= "Tgl Update";
+Tracking.properties.lbook_updated_by= "Diupdate Oleh";
