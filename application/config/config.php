@@ -16,7 +16,7 @@ error_reporting(E_ALL ^ E_NOTICE);
 | environments.
 |
 */
-$config['base_url'] = base_ci_url().'/telkom_tracking/';
+$config['base_url'] = base_ci_url().'/telkom_faq/';
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ $config['base_url'] = base_ci_url().'/telkom_tracking/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -226,7 +226,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '02527-269-2503946-70386-34730519'; 
+$config['encryption_key'] = '02527-269-2503946-70386-34730519';
 
 /*
 |--------------------------------------------------------------------------
@@ -363,7 +363,7 @@ $config['proxy_ips'] = '';
 //added by wiliam 18/06/2015 15:53:11
 $config['default_page'] = "home/index";
 $config['DB_prefix'] = "core";
-$config['common_path']	= $config['common_path']	= define('COM_URL',base_ci_url().'/telkom_tracking/');
+$config['common_path']	= $config['common_path']	= define('COM_URL',base_ci_url().'/telkom_faq/');
 
 
 function base_ci_url(){
