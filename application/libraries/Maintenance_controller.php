@@ -31,6 +31,8 @@ class Maintenance_controller {
         $start_date = getVarClean('start_date', 'str', '');
         $end_date = getVarClean('end_date', 'str', '');
 
+        $status_pengerjaan = getVarClean('status_pengerjaan', 'str', '');
+
     	$data = array('items' => array(), 'success' => false, 'message' => '');
 
     	try {
@@ -54,6 +56,10 @@ class Maintenance_controller {
                 $table->setCriteria("maintenance.mnt_desc ILIKE '%".$search_text."%'
                                         OR maintenance.mnt_by ILIKE '%".$search_text."%'
                                         OR maintenance.mnt_evidence_desc ILIKE '%".$search_text."%'");
+            }
+
+            if(!empty($status_pengerjaan)) {
+                $table->setCriteria("maintenance.mnt_id IN ( select mnt_id from track_maintenance_detail where mnt_det_status = '".$status_pengerjaan."')");
             }
 
             if(!empty($start_date) && !empty($end_date)) {
